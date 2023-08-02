@@ -4,7 +4,7 @@ $folder = 'images/';
 $images = glob($folder . 'photos/' . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
 $imagesHtml = '';
 foreach ($images as $image) {
-    $imagesHtml .= '<div><img src="' . $image . '"/></div>';
+    $imagesHtml .= '<img src="' . $image . '"/>';
 }
 
 $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif}', GLOB_BRACE)[0];

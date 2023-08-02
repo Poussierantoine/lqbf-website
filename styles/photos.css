@@ -9,53 +9,8 @@ section#photos {
 
 #carousel {
   width: 80%;
-  height: 500px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.carousel__container {
-    height: 100%;
-  background-color: black;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.carousel__item {
-    height: 100%;
-    padding: 10px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel__item img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: cover;
-}
-
-.carousel__next,
-.carousel__prev {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  top: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.carousel__next {
-  right: 0;
-}
-
-.carousel__prev {
-  left: 0;
-}
