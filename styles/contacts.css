@@ -1,0 +1,24 @@
+
+
+ul#contacts{
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    max-width: 50%;
+    row-gap: 50px;
+}
+
+ul#contacts li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+
+
+ul#contacts li img{
+    max-width: 70px;
+    max-height: 70px;
+}
