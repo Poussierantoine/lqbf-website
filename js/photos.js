@@ -15,7 +15,6 @@ const initCarousel = () => {
     slidesVisible: 2,
     rightIcon: "./images/icons/chevron-right.svg",
     leftIcon: "./images/icons/chevron-left.svg",
-    carouselBackgroundColor: "red",
     loop: true,
   });
 

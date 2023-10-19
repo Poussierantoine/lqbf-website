@@ -2,16 +2,42 @@ body{
     padding: 0;
     margin: 0;
     line-height: 1;
+    box-sizing: border-box;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 section{
-    width: 100vw;
-    margin-bottom: 300px;
-    border: solid grey 1px;
-    padding: 20px;
+    width: 80%;
+    max-width: 100%;
+    margin-bottom: 200px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+
+div.sectionTitle{
+    width: 100%;
+    padding-left: 100px;
+}
+
+
+
 h3{
-    margin-left: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+p.paragraph{
+    padding: 20px;
+    margin: 0;
+    font-size: 1.2rem;
 }

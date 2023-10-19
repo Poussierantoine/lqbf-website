@@ -1,14 +1,6 @@
 
 section#videos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-section#videos h3{
-    margin-left: 0;
-    margin-bottom: 20px;
+    width: 100vw;
 }
 
 
@@ -23,8 +15,8 @@ div#videoContainer{
 
 
 div#video{
-    height: 400px;
-    width: 700px;
+    height: 315px;
+    width: 560px;
     background-color: rgb(200, 200, 200);
     margin-left: auto;
     margin-right: auto;
@@ -32,3 +24,5 @@ div#video{
     justify-content: center;
     align-items: center;
 }
+
+/* mettre un media query a 800px pour faire une seule colonne de video */

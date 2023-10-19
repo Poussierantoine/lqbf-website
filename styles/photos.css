@@ -14,3 +14,22 @@ section#photos {
   margin-right: auto;
 }
 
+section#photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* carousel */
+
+section#photos {
+  width: 100vw;
+}
+
+#carousel {
+  width: 80%;
+  height: 600px;
+  padding-bottom: 30px;
+}
+
