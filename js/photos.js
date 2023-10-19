@@ -10,7 +10,6 @@ export default function initPhotos() {
 
 const initCarousel = () => {
   const carouselContainer = document.querySelector('#carousel')
-  console.log("c1");
   let c1 = new Carousel(carouselContainer, {
     slidesToScroll: 2,
     slidesVisible: 2,

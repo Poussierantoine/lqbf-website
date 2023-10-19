@@ -106,7 +106,6 @@ export default class Carousel {
   createNavigation() {
     const navigationButtonStyle = function (button) {
       const buttonStyle = button.style;
-      console.log(buttonStyle);
       buttonStyle.position = "absolute";
       buttonStyle.top = "50%";
       buttonStyle.width = "50px";
