@@ -9,7 +9,6 @@ section#photos {
 
 section#photos {
   width: 100vw;
-  z-index: -1;
 }
 
 #carousel {

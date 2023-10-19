@@ -5,7 +5,6 @@ section#photos {
   align-items: center;
   overflow: hidden;
   width: 100vw; /* Ajustement de la largeur */
-  z-index: -1;
 }
 
 /* Styles pour le carousel (#carousel) */

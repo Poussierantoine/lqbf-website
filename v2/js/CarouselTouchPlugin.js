@@ -44,18 +44,17 @@ export default class CarouselTouchPlugin {
   }
 
   endDrag(e) {
+    this.carousel.enableTransition();
     if (this.origin && this.lastTranslate) {
-      this.carousel.enableTransition();
-      if (Math.abs(this.lastTranslate.x / this.carousel.carouselWidth) > 0.2) {
+      if(Math.abs(this.lastTranslate.x / this.carousel.carouselWidth) > 0.2) {
         if (this.lastTranslate.x < 0) {
           this.carousel.next();
         } else {
           this.carousel.prev();
         }
-      } else {
-        this.carousel.gotoItem(this.carousel.currentSlide);
-      }
+      } 
     }
+    this.lastTranslate = null;
     this.origin = null;
   }
 }

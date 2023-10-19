@@ -44,8 +44,8 @@ export default class CarouselTouchPlugin {
   }
 
   endDrag(e) {
+    this.carousel.enableTransition();
     if (this.origin && this.lastTranslate) {
-      this.carousel.enableTransition();
       if (Math.abs(this.lastTranslate.x / this.carousel.carouselWidth) > 0.2) {
         if (this.lastTranslate.x < 0) {
           this.carousel.next();
