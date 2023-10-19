@@ -1,0 +1,35 @@
+/* Réinitialisation de la marge pour la section #contact-prices */
+section#contact-prices {
+    margin: 0;
+}
+
+/* Grille des contacts */
+ul#contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes de largeur égale */
+    gap: 50px;
+    max-width: 100%;
+    grid-auto-columns: 1fr;
+}
+
+ul#contacts li {
+    list-style: none;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+ul#contacts li img {
+    max-width: 70px;
+    max-height: 70px;
+}
+
+/* Phrase de fin */
+p.finalPhrase {
+    margin: 100px 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+}

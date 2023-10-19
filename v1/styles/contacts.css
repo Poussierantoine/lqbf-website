@@ -1,0 +1,40 @@
+
+section#contact-prices{
+    margin-bottom: 0;
+}
+
+
+/* grille des contacts */
+
+ul#contacts{
+    display: grid;
+    grid-template-columns: fit-content(50%) fit-content(50%);
+    row-gap: 50px;
+    max-width: 100%;
+    grid-auto-columns: 1fr;
+}
+
+ul#contacts li{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+
+ul#contacts li img{
+    max-width: 70px;
+    max-height: 70px;
+}
+
+
+/* phrase de fin */
+p.finalPhrase{
+    margin: 100px 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+}

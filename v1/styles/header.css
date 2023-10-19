@@ -1,0 +1,15 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background-color: rgb(0, 0, 0);
+    box-sizing: border-box;
+}
+
+header h2{
+    padding:0;
+    color: white;
+}

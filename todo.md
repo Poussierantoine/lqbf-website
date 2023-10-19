@@ -22,3 +22,5 @@ idées:
 - au lieu d'avoir les liens vers les sections sur le bandeau, il pourrait y avoir un fil conducteur cliquable sur la droite, ca les incite à scroll car ils savent ou ils en sont et ce qu'il y a apres alors que dans le bandeau on pourrait croire que c'est d'autre pages donc ca force pas l'utilisaterur a scroll mais plutot a aller directement à ce qu'il veut sans les anims
 
 - le logo au milieu du landing reste fixe au scroll et devient le header quand le scroll arriv au midscreen
+
+- les liens vers les reseaux devraient ouvrir un nouvel onglet

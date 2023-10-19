@@ -1,0 +1,22 @@
+
+
+
+section#description div#inspirations{
+    margin-top: 50px;
+}
+
+
+div.extrait {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+div#mp3player{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(105, 105, 105);
+}
