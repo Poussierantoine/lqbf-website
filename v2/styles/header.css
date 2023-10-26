@@ -14,3 +14,14 @@ header h2{
     padding:0;
     color: white;
 }
+
+header{
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s, transform 0.3s;
+}
+
+header.visible{
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -31,3 +31,15 @@ div#video {
         grid-template-columns: 100%; /* Une seule colonne de vidéos */
     }
 }
+
+
+
+@media screen and (max-width: 700px){
+    div#videoContainer {
+        gap: 100px;
+    }
+    div#video {
+        height: 170;
+        width: 300px;
+    }
+}

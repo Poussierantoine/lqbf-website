@@ -6,11 +6,11 @@ export default class CarouselTouchPlugin {
     carousel.container.addEventListener('dragstart', e => e.preventDefault()); // eviter de drag les images
     carousel.container.addEventListener('mousedown', this.startDrag.bind(this));
     carousel.container.addEventListener('touchstart', this.startDrag.bind(this), { passive: false });
-    window.addEventListener('mousemove', this.drag.bind(this));
-    window.addEventListener('touchmove', this.drag.bind(this), { passive: false, cancelable: true });
-    window.addEventListener('mouseup', this.endDrag.bind(this));
-    window.addEventListener('touchend', this.endDrag.bind(this));
-    window.addEventListener('touchcancel', this.endDrag.bind(this)); // si le drag s'arrete sans que ca ait de lien avec le carousel
+    carousel.container.addEventListener('mousemove', this.drag.bind(this));
+    carousel.container.addEventListener('touchmove', this.drag.bind(this), { passive: false, cancelable: true });
+    carousel.container.addEventListener('mouseup', this.endDrag.bind(this));
+    carousel.container.addEventListener('touchend', this.endDrag.bind(this));
+    carousel.container.addEventListener('touchcancel', this.endDrag.bind(this)); // si le drag s'arrete sans que ca ait de lien avec le carousel
     this.carousel = carousel;
   }
 
@@ -37,7 +37,7 @@ export default class CarouselTouchPlugin {
       } else if (e.touches) {
         return;
       }
-      let baseTranslate = this.carousel.currentSlide * -100 / this.carousel.items.length;
+      let baseTranslate = this.carousel.currentItem * -100 / this.carousel.items.length;
       this.lastTranslate = translate;
       this.carousel.translate(baseTranslate + 100 * translate.x / this.width);
     }
@@ -53,9 +53,10 @@ export default class CarouselTouchPlugin {
           this.carousel.prev();
         }
       } else {
-        this.carousel.gotoItem(this.carousel.currentSlide);
+        this.carousel.gotoItem(this.carousel.currentItem);
       }
     }
     this.origin = null;
+    this.lastTranslate = null;
   }
 }

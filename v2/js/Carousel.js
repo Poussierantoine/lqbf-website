@@ -178,8 +178,10 @@ export default class Carousel {
     }
     this.element.appendChild(nextButton);
     this.element.appendChild(prevButton);
-    nextButton.addEventListener("click", this.next.bind(this));
-    prevButton.addEventListener("click", this.prev.bind(this));
+    const nextFunction = this.next.bind(this);
+    const prevFunction = this.prev.bind(this);
+    nextButton.addEventListener("click", nextFunction);
+    prevButton.addEventListener("click", prevFunction);
     if (this.options.loop === true) {
       return;
     }
@@ -281,6 +283,8 @@ export default class Carousel {
    * déplace le carousel vers les élément précédent
    */
   prev() {
+    console.log("hello")
+    console.log(`this.currentItem = ${this.currentItem}`);
     this.gotoItem(this.currentItem - this.options.slidesToScroll);
   }
 
@@ -382,7 +386,9 @@ export default class Carousel {
     if (this.isMobile) {
       this.pagination.style.display = "none";
     } else {
-      this.pagination.style.display = "flex";
+      if(this.options.pagination === true){
+        this.pagination.style.display = "flex";
+      }
     }
   }
 

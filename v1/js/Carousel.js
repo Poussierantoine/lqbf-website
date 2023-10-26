@@ -79,7 +79,7 @@ export default class Carousel {
     // Evenements
     this.moveCallbacks.forEach((cb) => cb(this.currentItem));
     this.onWindowResize();
-    //window.addEventListener("resize", this.onWindowResize.bind(this));
+    window.addEventListener("resize", this.onWindowResize.bind(this));
     this.element.addEventListener("keyup", (e) => {
       if (e.key === "ArrowRight" || e.key === "Right") {
         this.next();
@@ -284,6 +284,7 @@ export default class Carousel {
    */
   prev() {
     console.log("hello")
+    console.log(`this.currentItem = ${this.currentItem}`);
     this.gotoItem(this.currentItem - this.options.slidesToScroll);
   }
 

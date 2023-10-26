@@ -1,16 +1,6 @@
 import initPhotos from "./js/photos.js";
+import initAnimations from "./js/animations.js";
 
-
-const scrollInvite = function (){
-  const button = document.querySelector('button#arrow-bottom');
-  button.addEventListener('click', function () {
-    window.scrollTo({
-      top: 800,
-      left: 0,
-      behavior: "smooth",
-    });
-  })
-}
 
 
 
@@ -19,8 +9,8 @@ const scrollInvite = function (){
 } */
 
 document.addEventListener("DOMContentLoaded", () => {
-  scrollInvite();
   initPhotos()
+  initAnimations();
+  
 });
-
 

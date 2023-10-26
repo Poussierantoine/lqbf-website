@@ -1,23 +1,77 @@
-
-
-
-section#description div#inspirations{
-    margin-top: 50px;
+section#description {
+    min-width: 60vw;
+    gap: 50px;
 }
 
 
-div.extrait {
-    margin-left: 20px;
-    margin-bottom: 20px;
+
+section#description div.description-line {
     display: flex;
-    -webkit-box-align: center; /* Safari et anciennes versions de Chrome */
+    flex-direction: row;
     align-items: center;
-    gap: 20px;
+    gap: 10vw;
+    justify-content: space-between;
+    width: 100%;
 }
 
 
-div#mp3player{
-    width: 50px;
-    height: 50px;
-    background-color: rgb(105, 105, 105);
+/* Affichage des images */
+section#description div.description-line img {
+    max-height: 40vh;
+    max-width: 50%;
+    opacity: 0;
+}
+
+section#description div.description-line.image-on-right img {
+    transform: translateX(100px);
+}
+
+section#description div.description-line.image-on-left img {
+    transform: translateX(-100px);
+}
+
+section#description div.description-line.visible img {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 1s ease-in-out;
+}
+
+/*  Affichage du texte */
+
+section#description div.description-line p {
+    opacity: 0;
+    font-size:30px;
+    transition: all 0.8s ease-in-out;
+}
+
+section#description div.description-line.visible p {
+    opacity: 1;
+    font-size:40px;
+    transition: all 0.8s ease-in-out;
+}
+
+@media screen and (max-width: 1500px){
+    section#description div.description-line p {
+        font-size:20px;
+    }
+    
+    section#description div.description-line.visible p {
+        font-size:30px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    section#description div.description-line p {
+        font-size:10px;
+    }
+    
+    section#description div.description-line.visible p {
+        font-size:20px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    section#description div.description-line img {
+        display: none;
+    }
 }
