@@ -4,7 +4,13 @@
 
 - fonds
 
-- carousle qui slide de la gauche
+v3: fondu sur description
+
+v4: fondu plus weight sur la description (gsap + variable font)
+
+v5: seulement le weight sur la description mais le carousel slide de la gauche
+
+v6: essai trafic de scroll (pas l'impression que les elements sont les uns au dessus des autres)
 
 
 

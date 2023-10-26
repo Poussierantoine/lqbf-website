@@ -6,7 +6,7 @@
 /** containers */
 section#description {
   min-width: 60vw;
-  gap: 100px;
+  gap: 150px;
 }
 
 div.description-line {
@@ -16,46 +16,26 @@ div.description-line {
   gap: 8vw;
   justify-content: space-between;
   width: 100%;
-  transition: all 0.1s ease-in-out;
 }
 
 /** Affichage des images */
 div.description-line img {
   max-height: 40vh;
   max-width: 50%;
-  opacity: 0;
-}
-
-div.description-line.image-on-right img {
-  transform: translateX(100px);
-}
-
-div.description-line.image-on-left img {
-  transform: translateX(-100px);
-}
-
-div.description-line.visible img {
-  opacity: 1;
-  transform: translateX(0px);
-  transition: all 1s ease-in-out;
 }
 
 /*  Affichage du texte */
 
 div.description-line p {
-  opacity: 0;
   font-size: 30px;
-  transition: all 0.8s ease-in-out;
   font-family: "NyghtSerif";
   display: grid;
   grid-template-columns: 1fr;
+
 }
 
 
-div.description-line.visible p {
-  opacity: 1;
-  font-size: 40px;
-}
+
 
   /** Media queries */
 

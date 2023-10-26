@@ -6,10 +6,7 @@
 function descriptionAndHeaderAnims (){
   const header = document.querySelector('header')
   const landing = document.querySelector('section#landing')
-  const firstLine = document.querySelector('.description-line#first-line');
-  const secondLine = document.querySelector('.description-line#second-line');
-  const thirdLine = document.querySelector('.description-line#third-line');
-  const photosSection = document.querySelector('section#photos');
+  
   /**
    * affichage du header
    * classe active sur la premiere ligne
@@ -24,35 +21,6 @@ function descriptionAndHeaderAnims (){
     });
   });
   landingObserver.observe(landing)
-  /**
-   * rend visible la premiere ligne
-   */
-  const secondLineObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        firstLine.classList.add('visible');
-      }
-    })
-  })
-  secondLineObserver.observe(secondLine);
-  //deuxieme ligne
-  const thirdLineObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        secondLine.classList.add('visible');
-      }
-    })
-  })
-  thirdLineObserver.observe(thirdLine);
-  //troisieme ligne
-  const photosSectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        thirdLine.classList.add('visible');
-      }
-    })
-  })
-  photosSectionObserver.observe(photosSection);
 }
 
 /**
