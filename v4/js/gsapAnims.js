@@ -30,7 +30,6 @@ export function description() {
         trigger: text,
         start: "top 80%",
         end: "bottom 20%",
-        markers: true,
         scrub: true,
       }
     })

@@ -1,6 +1,8 @@
 import initPhotos from "./js/photos.js";
 import initAnimations from "./js/animations.js";
 import { carouselAnimation, description } from "./js/gsapAnims.js";
+import createCircles from "./js/background.js";
+import createEventToDark from "./js/theme.js";
 
 
 
@@ -13,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initAnimations();
   description();
   carouselAnimation();
+  createCircles(4000, 100, 50, 200)
+  createEventToDark();
 });
 
 

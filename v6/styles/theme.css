@@ -1,0 +1,9 @@
+
+
+main.light .theme-colored{
+    color: black;
+}
+
+main.dark .theme-colored{
+    color: white;
+}

@@ -1,0 +1,10 @@
+body{
+    background: #0f0e17;
+}
+
+.circle {
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(10px);
+    z-index: -1;
+}

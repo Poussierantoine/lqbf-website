@@ -96,11 +96,11 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
         <section id="contacts">
             <p class="finalPhrase">N'hesitez pas à nous contacter quelle que soit votre projet !</p>
             <ul id="contacts-list">
-                <li id="third-contact">
+                <li id="first-contact">
                     <img src="<?= $folder ?>/icons/enveloppe.svg" alt="addresse mail">
                     <p>lqbf.contact@gmail.com</p>
                 </li>
-                <li id="fourth-contact">
+                <li id="second-contact">
                     <img src="<?= $folder ?>/icons/appel-telephonique.svg" alt="telephone">
                     <p>06 81 95 16 55</p>
                 </li>

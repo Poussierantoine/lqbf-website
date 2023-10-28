@@ -19,7 +19,10 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LQBF</title>
     <link href="style.css" rel="stylesheet">
-    
+    <!-- imports GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <!-- appli js -->
     <script src="app.js" type="module"></script>
     <style>
@@ -34,6 +37,9 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
 <body>
     <header>
         <h2>LQBF</h2>
+        <button id="theme-toggle">
+            <!-- mettre un icon soleil et lune -->
+        </button>
     </header>
 
     <section id="landing">
@@ -46,11 +52,11 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
         </button>
     </section>
 
-    <main>
+    <main class="dark">
 
         <section id="description">
             <div class="description-line image-on-right" id="first-line">
-                <p>
+                <p class="theme-colored">
                     <span class="text-line">LQBF, c'est un ensemble de </span>
                     <span class="text-line"> quatre musiciens passionnés. </span>
                     <span class="text-line">Chanteuse, clavériste, batteur, </span>
@@ -60,7 +66,7 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
             </div>
             <div class="description-line image-on-left" id="second-line">
                 <img src="<?= $folder ?>images_description/1X7A5704.JPG" alt="photo du groupe entier">
-                <p>
+                <p class="theme-colored">
                 <span class="text-line">Nos influences sont multiples </span>
                 <span class="text-line">et colorées, allant de la soul </span>
                 <span class="text-line">au funk,en passant par le jazz </span>
@@ -70,7 +76,7 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
                 </p>
             </div>
             <div class="description-line image-on-right" id="third-line">
-                <p>
+                <p class="theme-colored">
                 <span class="text-line">Reprises, arrangements, </span>
                 <span class="text-line">compositions: nous sommes </span>
                 <span class="text-line">ouverts aux propositions de </span>
@@ -82,7 +88,7 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
         </section>
         
         <section id="photos">
-            <h3>Voici quelques images de notre groupe</h3>
+            <h3 class="theme-colored">Voici quelques images de notre groupe</h3>
 
             <div id="carousel">
                 <?= $imagesHtml ?>
@@ -90,7 +96,7 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
         </section>
 
         <section id="videos">
-            <h3>Voici quelques extraits de nos prestations</h3>
+            <h3 class="theme-colored">Voici quelques extraits de nos prestations</h3>
 
             <div id="videoContainer">
 
@@ -107,15 +113,15 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
         </section>
 
         <section id="contacts">
-            <p class="finalPhrase">N'hesitez pas à nous contacter quelle que soit votre projet !</p>
+            <p class="finalPhrase theme-colored">N'hesitez pas à nous contacter quel que soit votre projet !</p>
             <ul id="contacts-list">
                 <li id="first-contact">
-                    <img src="<?= $folder ?>/icons/enveloppe.svg" alt="addresse mail">
-                    <p>lqbf.contact@gmail.com</p>
+                    <img class="theme-colored" src="<?= $folder ?>/icons/enveloppe.svg" alt="addresse mail">
+                    <p class="theme-colored">lqbf.contact@gmail.com</p>
                 </li>
                 <li id="second-contact">
-                    <img src="<?= $folder ?>/icons/appel-telephonique.svg" alt="telephone">
-                    <p>06 81 95 16 55</p>
+                    <img class="theme-colored" src="<?= $folder ?>/icons/appel-telephonique.svg" alt="telephone">
+                    <p class="theme-colored">06 81 95 16 55</p>
                 </li>
             </ul>
 

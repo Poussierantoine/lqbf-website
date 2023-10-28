@@ -17,6 +17,7 @@ const initCarousel = () => {
     leftIcon: "../images/icons/chevron-left.svg",
     infinite: false,
     mobileTouch: true,
+    carouselBackgroundColor: "transparent"
   });
 
   console.log(c1);

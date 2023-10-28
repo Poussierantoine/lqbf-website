@@ -167,6 +167,9 @@ export default class Carousel {
     let prevButton = this.createDivWithClass("carousel__prev");
     navigationButtonStyle(nextButton);
     navigationButtonStyle(prevButton);
+    if (this.options.infinite === true) {
+      prevButton.style.visibility = "hidden";
+    }
     prevButton.style.left = "0";
     nextButton.style.right = "0";
     if (
@@ -316,6 +319,20 @@ export default class Carousel {
         index =
           this.currentItem - this.options.slidesVisible;
       } 
+    }else{
+      if(index <= 0 ){
+        this.prevButton.style.visibility = "hidden";
+        this.nextButton.style.visibility = "visible";
+      } else if (
+        (this.nbItems % 2 === 0 && index >= this.nbItems - 2)
+        || (this.nbItems % 2 === 1 && index >= this.nbItems - 1)
+        ){
+        this.nextButton.style.visibility = "hidden";
+        this.prevButton.style.visibility = "visible";
+        } else {
+          this.prevButton.style.visibility = "visible";
+          this.nextButton.style.visibility = "visible";
+        }
     }
 
     //gestion du depassement
