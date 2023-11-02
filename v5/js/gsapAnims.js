@@ -43,10 +43,9 @@ export function carouselAnimation() {
     scrollTrigger: {
       trigger: container,
       start: "top 80%",
-      markers: true,
     }
   })
   
-  tl.from(container, {opacity: 0, x:-1500, ease: "power1", duration: 2.5})
+  tl.from(container, {x:-1500, ease: "power1", duration: 2.5})
 
 }

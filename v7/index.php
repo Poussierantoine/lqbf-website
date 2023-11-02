@@ -36,6 +36,8 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
 
 <body>
 
+<div id="background"></div>
+
     <header>
         <h2>LQBF</h2>
         <button id="theme-toggle">
