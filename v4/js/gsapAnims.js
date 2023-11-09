@@ -24,29 +24,6 @@ export function description() {
     lineTl.from(line, {opacity: 0, ease: "power2"}, "fullTimeAnimation")
     .from(img, {x: imgTranslateX, ease: "power4"}, "fullTimeAnimation")
     .from(text, {fontSize: 20, ease: "power2.out"}, "fullTimeAnimation")
-    
-    const textTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: text,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: true,
-      }
-    })
-    
-    textTl.to(text, {
-      fontWeight: 700, 
-      duration: 1,
-      onUpdate: function() {
-      text.style.fontVariationSettings = "'wght' " + text.style.fontWeight;
-    },
-  })
-  .to(text, {
-      fontWeight: 400, 
-      onUpdate: function() {
-      text.style.fontVariationSettings = "'wght' " + text.style.fontWeight;
-    },
-  }, ">80%")
   
   
 })

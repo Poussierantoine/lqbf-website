@@ -2,13 +2,12 @@
 const descriptionAnim = () => {
   gsap.utils.toArray('.description-line').forEach((line) => {
     let text = line.querySelector('p');
-    let img = line.querySelector('img');
     
     const textTl = gsap.timeline({
       scrollTrigger: {
         trigger: text,
-        start: "top 80%",
-        end: "bottom 20%",
+        start: "top 100%",
+        end: "bottom 10%",
         scrub: true,
       }
     })
@@ -25,7 +24,7 @@ const descriptionAnim = () => {
       onUpdate: function() {
       text.style.fontVariationSettings = "'wght' " + text.style.fontWeight;
     },
-  }, ">80%")
+  }, ">90%")
 })
 }
 

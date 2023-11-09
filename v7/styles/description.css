@@ -1,7 +1,4 @@
-@font-face {
-  font-family: "NyghtSerif";
-  src: url("../../fonts/RobotoFlex.ttf") format("truetype");
-}
+
 
 /** containers */
 section#description {
@@ -28,7 +25,6 @@ div.description-line img {
 
 div.description-line p {
   font-size: 35px;
-  font-family: "NyghtSerif";
   display: grid;
   grid-template-columns: 1fr;
 

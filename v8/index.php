@@ -36,7 +36,7 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
 
 <body>
 
-<div id="background"></div>
+    <div id="background"></div>
 
     <header>
         <h2>LQBF</h2>
@@ -70,26 +70,26 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
             <div class="description-line image-on-left" id="second-line">
                 <img src="<?= $folder ?>images_description/1X7A5704.JPG" alt="photo du groupe entier">
                 <p class="theme-colored">
-                <span class="text-line">Nos influences sont multiples </span>
-                <span class="text-line">et colorées, allant de la soul </span>
-                <span class="text-line">au funk,en passant par le jazz </span>
-                <span class="text-line">et la pop. Ceux qui nous font </span>
-                <span class="text-line">vibrer ? Jamiroquaï, Stevie </span>
-                <span class="text-line">Wonder, Amy Winehouse...</span>
+                    <span class="text-line">Nos influences sont multiples </span>
+                    <span class="text-line">et colorées, allant de la soul </span>
+                    <span class="text-line">au funk,en passant par le jazz </span>
+                    <span class="text-line">et la pop. Ceux qui nous font </span>
+                    <span class="text-line">vibrer ? Jamiroquaï, Stevie </span>
+                    <span class="text-line">Wonder, Amy Winehouse...</span>
                 </p>
             </div>
             <div class="description-line image-on-right" id="third-line">
                 <p class="theme-colored">
-                <span class="text-line">Reprises, arrangements, </span>
-                <span class="text-line">compositions: nous sommes </span>
-                <span class="text-line">ouverts aux propositions de </span>
-                <span class="text-line">représentations.</span>
-                <span class="text-line">Votre scène sera la nôtre!</span>
+                    <span class="text-line">Reprises, arrangements, </span>
+                    <span class="text-line">compositions: nous sommes </span>
+                    <span class="text-line">ouverts aux propositions de </span>
+                    <span class="text-line">représentations.</span>
+                    <span class="text-line">Votre scène sera la nôtre!</span>
                 </p>
                 <img src="<?= $folder ?>images_description/TT9B0006.JPG" alt="photo du groupe entier">
             </div>
         </section>
-        
+
         <section id="photos">
             <h3 class="theme-colored">Voici quelques images de notre groupe</h3>
 
