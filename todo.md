@@ -12,6 +12,8 @@ v7 background effet lumiere fixe avec parrallaxe
 
 v8: background effet lumiere normal
 
+v9: 
+
 
 
 
@@ -21,7 +23,7 @@ notes:
 - la premiere phrase est un peu courte en tout cas elle me laisse un peu sur ma fin, peut être rajouter qqch après les "..." il faudrait appuyer sur le fait que vous etes que 4 mais que vous faites plein de choses
     "LQBF, c'est un ensemble de quatre musiciens passionnés. Chanteuse, clavériste, batteur, trombonistes, bassiste..."
 
-- au moment des contacts faudrait voir quelle phrase il veulent mettre
+- revoir les titres
 
 - si readme mettre la police utilisée: https://github.com/googlefonts/amstelvar
 
