@@ -18,15 +18,44 @@ header h2{
     font-variation-settings: 'wght' 600;
 }
 
-header button{
+header #theme-switch-container{
     position: absolute;
     right: 10px;
     background-color: transparent;
+    border: solid 1px white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 0px;
+    width: 80px;
+    height: 40px;
+}
+
+header #theme-switch {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: transparent;
     border: 0;
+    border-radius: 50%;
+    transform: rotate(-180deg);
 }
 
 header button img{
+    width: 40%;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
     filter: invert(100%);
+}
+
+header button img#sun-icon{
+    transform: translate(-50%, -50%) scale(2);
+}
+
+header button img#moon-icon{
+    opacity: 0;
 }
 
 

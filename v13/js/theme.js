@@ -19,15 +19,20 @@ const switchToLight = function (toLightAbortController) {
   toLightAbortController.abort();
   //changement de la couleur du contenu
   colorToLight();
-  //changement de l'icone du bouton
-  const img = document.querySelector('#theme-toggle img');
-  img.setAttribute('src', '../images/icons/moon.svg');
-  //ajout de l'evenement pour switcher vers le theme dark
-  const toDarkAbortController = new AbortController();
-  const themeToggle = document.querySelector('#theme-toggle');
-  themeToggle.addEventListener('click', () => {
-    switchToDark(toDarkAbortController);
-  }, { signal: toDarkAbortController.signal })
+  //animation sur le bouton
+  document.querySelector('#theme-switch-container').classList.toggle('dark-theme');
+  const  tl = gsap.timeline();
+  tl.to('#theme-switch', {duration: 1, rotation: 0, x: 40, ease: "power2"})
+    .to("#sun-icon", {duration: 0.3, opacity: 0, scale: 1, ease: "power2"}, "-=1")
+    .to("#moon-icon", {duration: 0.3, opacity: 1, scale: 2, ease: "power2"}, "-=1")
+  tl.then(() => {
+    //ajout de l'evenement pour switcher vers le theme dark
+    const toDarkAbortController = new AbortController();
+    const themeToggle = document.querySelector('#theme-switch-container');
+    themeToggle.addEventListener('click', () => {
+      switchToDark(toDarkAbortController);
+    }, { signal: toDarkAbortController.signal })
+  })
 }
 
 const switchToDark = function (toDarkAbortController) {
@@ -35,21 +40,26 @@ const switchToDark = function (toDarkAbortController) {
   toDarkAbortController.abort();
   //changement de la couleur du contenu
   colorToDark();
-  //changement de l'icone du bouton
-  const img = document.querySelector('#theme-toggle img');
-  img.setAttribute('src', '../images/icons/sun.svg');
-  //ajout de l'evenement pour switcher vers le theme light
-  const toLightAbortController = new AbortController();
-  const themeToggle = document.querySelector('#theme-toggle');
-  themeToggle.addEventListener('click', () => {
-    switchToLight(toLightAbortController);
-  }, { signal: toLightAbortController.signal })
+  //animation sur le bouton
+  document.querySelector('#theme-switch-container').classList.toggle('dark-theme');
+  const tl = gsap.timeline();
+  tl.to('#theme-switch', {duration: 1, rotation: -180, x: 0, ease: "power2"})
+    .to("#sun-icon", {duration: 1, opacity: 1, scale: 2, ease: "power2"}, "-=1")
+    .to("#moon-icon", {duration: 1, opacity: 0, scale: 1, ease: "power2"}, "-=1")
+  tl.then(() => {
+    //ajout de l'evenement pour switcher vers le theme light
+    const toLightAbortController = new AbortController();
+    const themeToggle = document.querySelector('#theme-switch-container');
+    themeToggle.addEventListener('click', () => {
+      switchToLight(toLightAbortController);
+    }, { signal: toLightAbortController.signal })
+  })
 }
 
 
 export default function initThemeToggle(){
   const main = document.querySelector('main');
-  const themeToggle = document.querySelector('#theme-toggle');
+  const themeToggle = document.querySelector('#theme-switch-container');
 
   let darkOrLight = true;
   if(!main.classList.contains('dark')) {
