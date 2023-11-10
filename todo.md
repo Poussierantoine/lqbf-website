@@ -18,6 +18,10 @@ v10: agrandissement des photos de la description et resserement avec le texte
 
 v11: seulement scroll automatique sur le carousel
 
+v12: mise du carousel en mode infinite et creation d'un background unique (pas random)
+
+v13: bouton changement de theme
+
 
 
 
@@ -29,10 +33,7 @@ notes:
 
 - si readme mettre la police utilisée: https://github.com/googlefonts/amstelvar
 
-garder la version parallaxe
-pour le fond: pas trop de rouge, peut etre plus orange que jaune
 garder seulement le theme dark ?
-ameliorer logo sur le header
 
 
 
