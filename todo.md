@@ -14,7 +14,7 @@ v8: background effet lumiere normal
 
 v9: travail sur les animations et le design general
 
-v10: agrandissement des photos de la description
+v10: agrandissement des photos de la description et resserement avec le texte
 
 
 
@@ -29,14 +29,17 @@ notes:
 
 - si readme mettre la police utilisée: https://github.com/googlefonts/amstelvar
 
-titre pas assez gras par rapport à la description, inverser
-grossir les photos de la description
 garder la version parallaxe
 pour le fond: pas trop de rouge, peut etre plus orange que jaune
 garder seulement le theme dark ?
+ameliorer logo sur le header
+
+
 
 idees pour plus tard
 
 - control du scroll elements fixes
 
 - le logo au milieu du landing reste fixe au scroll et devient le header quand le scroll arriv au midscreen
+
+- peut etre essayer de faire plusieurs niveaux de lumieres en parrallaxe pour le background
