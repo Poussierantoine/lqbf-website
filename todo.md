@@ -16,7 +16,7 @@ v9: travail sur les animations et le design general
 
 v10: agrandissement des photos de la description et resserement avec le texte
 
-
+v11: seulement scroll automatique sur le carousel
 
 
 

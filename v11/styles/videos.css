@@ -1,0 +1,45 @@
+/* Styles pour la section #videos */
+section#videos {
+    width: 100vw;
+}
+
+/* Styles pour le conteneur de vidéos (#videoContainer) */
+div#videoContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 50px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styles pour les vidéos (#video) */
+div#video {
+    height: 315px;
+    width: 560px;
+    background-color: rgb(200, 200, 200);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query à 1500px pour une seule colonne de vidéos */
+@media screen and (max-width: 1500px) {
+    div#videoContainer {
+        grid-template-columns: 100%; /* Une seule colonne de vidéos */
+    }
+}
+
+
+
+@media screen and (max-width: 700px){
+    div#videoContainer {
+        gap: 100px;
+    }
+    div#video {
+        height: 170;
+        width: 300px;
+    }
+}
