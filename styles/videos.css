@@ -1,23 +1,15 @@
-
-section#videos{
+section#videos {
     width: 100vw;
 }
 
-
-div#videoContainer{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 50px;
-    max-width: 80%;
+div#videoContainer {
     margin-left: auto;
     margin-right: auto;
 }
 
-
-div#video{
-    height: 315px;
-    width: 560px;
-    background-color: rgb(200, 200, 200);
+#video-container iframe {
+    height: 630px;
+    width: 1120px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -25,4 +17,20 @@ div#video{
     align-items: center;
 }
 
-/* mettre un media query a 800px pour faire une seule colonne de video */
+/** responsive  */
+@media screen and (max-width: 1300px){
+    #video-container iframe {
+        height: 315px;
+        width: 560px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    div#videoContainer {
+        gap: 100px;
+    }
+    div#video {
+        height: 170;
+        width: 300px;
+    }
+}

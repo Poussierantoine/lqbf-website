@@ -1,35 +1,21 @@
 section#photos {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-}
-
-/* carousel */
-
-#carousel {
-  width: 80%;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-section#photos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-}
-
-/* carousel */
-
-section#photos {
-  width: 100vw;
+  width: 100vw; 
 }
 
 #carousel {
   width: 80%;
+  max-width: 100%; 
   height: 600px;
   padding-bottom: 30px;
 }
+
+
+
+
+
 

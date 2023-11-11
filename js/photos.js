@@ -1,24 +1,22 @@
 
 import Carousel from './Carousel.js';
 
-export default function initPhotos() {
-  initCarousel();
-}
-
-
-
-
-const initCarousel = () => {
+/**
+ * @description initialise le carousel avec les options adaptées
+ */
+export default function  initCarousel () {
   const carouselContainer = document.querySelector('#carousel')
-  let c1 = new Carousel(carouselContainer, {
+  const c1 = new Carousel(carouselContainer, {
     slidesToScroll: 2,
     slidesVisible: 2,
-    rightIcon: "./images/icons/chevron-right.svg",
-    leftIcon: "./images/icons/chevron-left.svg",
-    loop: true,
+    rightIcon: "../images/icons/chevron-right.svg",
+    leftIcon: "../images/icons/chevron-left.svg",
+    infinite: true,
+    mobileTouch: true,
+    carouselBackgroundColor: "transparent",
+    movingAlone: true,
+    maxMobileWidth: 900,
   });
-
-  console.log(c1);
 };
 
 

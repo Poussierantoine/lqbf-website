@@ -1,18 +1,13 @@
 import initPhotos from "./js/photos.js";
-
-const scrollInvite = function (){
-  const button = document.querySelector('button#arrow-bottom');
-  button.addEventListener('click', function () {
-    window.scrollTo({
-      top: 800,
-      left: 0,
-      behavior: "smooth",
-    });
-  })
-}
-
+import initAnimations from "./js/animations.js";
+import initGSAPAnimations from "./js/gsapAnims.js";
+import initBackground from "./js/background.js";
+import initThemeToggle from "./js/theme.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  //scrollInvite();
   initPhotos();
+  initAnimations();
+  initGSAPAnimations();
+  initThemeToggle();
+  initBackground()
 });
