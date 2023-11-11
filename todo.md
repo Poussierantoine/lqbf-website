@@ -1,18 +1,6 @@
 
 
-v3: arrivée en fondu sur la description
 
-v4: arrivée en fondu scrub-scroll sur la description
-
-v5: seulement le weight sur la description mais le carousel slide de la droite
-
-v6: background rond de couleur
-
-v7 background effet lumiere fixe avec parrallaxe
-
-v8: background effet lumiere normal
-
-v9: travail sur les animations et le design general
 
 v10: agrandissement des photos de la description et resserement avec le texte
 
@@ -20,7 +8,7 @@ v11: seulement scroll automatique sur le carousel
 
 v12: mise du carousel en mode infinite et creation d'un background unique (pas random)
 
-v13: bouton changement de theme
+v13: bouton changement de theme et amelioration des themes
 
 
 
