@@ -66,9 +66,9 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
         <section id="description">
             <div class="description-line image-on-right" id="first-line">
                 <p class="theme-colored">
-                    <span class="text-line">LQBF, c'est un ensemble de </span>
-                    <span class="text-line"> quatre musiciens passionnés. </span>
-                    <span class="text-line">Chanteuse, clavériste, batteur, </span>
+                    <span class="text-line">LQBF, c'est un ensemble de</span>
+                    <span class="text-line">quatre musiciens passionnés.</span>
+                    <span class="text-line">Chanteuse, clavériste, batteur,</span>
                     <span class="text-line">trombonistes, bassiste...</span>
                 </p>
                 <img src="<?= $folder ?>images_description/TT9B0090.JPG" alt="photo du groupe entier">
@@ -107,11 +107,9 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
         <section id="videos">
             <h3 class="theme-colored">Voici quelques extraits de nos prestations</h3>
 
-            <div id="videoContainer">
+            <div id="video-container">
 
-                <div id="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/SwcNkCY1dmo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
+            <iframe src="https://www.youtube.com/embed/vQ321gpB3eY?si=DnNul19NU0Cjiwos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
 

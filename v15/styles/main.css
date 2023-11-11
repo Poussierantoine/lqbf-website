@@ -1,57 +1,49 @@
 @font-face {
-    font-family: "Amstelvar";
-    src: url("../../fonts/Amstelvar-Roman.ttf") format("truetype");
-  }
-
-  @font-face {
-    font-family: "Amstelvar-It";
-    src: url("../../fonts/Amstelvar-Italic.ttf") format("truetype");
-  }
-
-body{
-    padding: 0;
-    margin: 0;
-    line-height: 1;
-    box-sizing: border-box;
-    font-family: Amstelvar;
-        font-variation-settings: 'wght' 500, 'wdth' 100, 'opsz' 50, 'GRAD' 0, 'XTRA' 550, 'YTLC' 500, 'YTDE' -340, 'YTAS' 800, 'XOPQ' 120, 'YOPQ' 60, 'YTFI' 800, 'YTUC' 800;
+  font-family: "Amstelvar";
+  src: url("../../fonts/Amstelvar-Roman.ttf") format("truetype");
 }
 
-#description p{
-    font-family: Amstelvar-It;
-    font-variation-settings: 'wgth' 400;
+/** paramettres globaux */
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  box-sizing: border-box;
+  font-family: Amstelvar;
+  font-variation-settings: "wght" 500, "wdth" 100, "opsz" 50, "GRAD" 0,
+    "XTRA" 550, "YTLC" 500, "YTDE" -340, "YTAS" 800, "XOPQ" 120, "YOPQ" 60,
+    "YTFI" 800, "YTUC" 800;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+section {
+  width: 80%;
+  max-width: 100%;
+  margin-bottom: 10vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/** contenu textuel global */
 h3 {
-    font-variation-settings: 'wght' 600, 'opsz' 80;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-align: center;
+  font-variation-settings: "wght" 600, "opsz" 80;
+  font-size: 50px;
+  margin-bottom: 100px;
+  text-align: center;
 }
 
-
-
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+@media screen and (max-width: 900px) {
+  h3 {
+    font-size: 40px;
+  }
 }
-
-section{
-    width: 80%;
-    max-width: 100%;
-    margin-bottom: 10vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-div.sectionTitle{
-    width: 100%;
-    padding-left: 100px;
-}
-

@@ -1,4 +1,4 @@
-
+/** landing */
 
 section#landing {
     height:100vh;
@@ -21,7 +21,7 @@ section#landing h1{
     font-variation-settings: 'wght' 800, 'wdth' 100, 'opsz' 90, 'GRAD' 250, 'XTRA' 560, 'XOPQ' 120, 'YOPQ' 80, 'YTUC' 700;
 }
 
-
+/** scroll invite */
 
 section#landing button#arrow-bottom{
     background-color: transparent;
@@ -35,7 +35,6 @@ section#landing button#arrow-bottom{
 section#landing button#arrow-bottom:hover{
     cursor: pointer;
 }
-
 
 button#arrow-bottom:hover img{
     animation-iteration-count: 2;
@@ -58,6 +57,7 @@ button#arrow-bottom img{
 }
 
 
+/* responsive */
 
 @media (max-width: 1200px) {
     button#arrow-bottom {

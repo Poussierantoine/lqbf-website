@@ -1,17 +1,15 @@
-/* Styles pour la section #photos */
 section#photos {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-  width: 100vw; /* Ajustement de la largeur */
+  width: 100vw; 
 }
 
-/* Styles pour le carousel (#carousel) */
 #carousel {
   width: 80%;
-  max-width: 100%; /* Ajustement pour la compatibilité */
+  max-width: 100%; 
   height: 600px;
   padding-bottom: 30px;
 }

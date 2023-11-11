@@ -1,4 +1,7 @@
-
+@font-face {
+  font-family: "Amstelvar-It";
+  src: url("../../fonts/Amstelvar-Italic.ttf") format("truetype");
+}
 
 /** containers */
 section#description {
@@ -20,53 +23,42 @@ div.description-line img {
   max-width: 45%;
 }
 
-/*  Affichage du texte */
+/**  Affichage du texte */
 
 div.description-line p {
-  font-size: 35px;
+  font-family: Amstelvar-It;
+  font-variation-settings: "wgth" 400;
+  font-size: 2vw;
   display: grid;
   grid-template-columns: 1fr;
+  width: 45%;
 }
 
-
-
-
-  /** Media queries */
-
-@media screen and (max-width: 1510px) {
-  section#description div.description-line p {
-    font-size: 25px;
-  }
+div.description-line p span.text-line {
+  padding-left: 10%;
 }
 
-@media screen and (max-width: 1300px) {
-  section#description div.description-line p {
-    font-size: 20px;
-  }
-  section#description div.description-line p{
-    animation: none;
-  }
-
-}
+/** responsive pour mobile */
 
 @media screen and (max-width: 900px) {
-    div.description-line img {
-      display: none;
-    }
-    section#description{
-      gap: 5px;
-    }
-    section#description div.description-line p{
-        opacity: 1;
-        font-size: 25px;
-        transform: none;
-        transition: none;
-        display: block;
-    }
-    p span.text-line{
-      margin-right: 5px;
-      display: inline;
-    }
+  div.description-line img {
+    display: none;
   }
-
-
+  section#description {
+    min-width: 80vw;
+    gap: 5px;
+  }
+  section#description div.description-line p {
+    width: 100%;
+    opacity: 1;
+    font-size: 25px;
+    transform: none;
+    transition: none;
+    display: block;
+  }
+  div.description-line p span.text-line {
+    margin-right: 5px;
+    display: inline;
+    padding: 0;
+  }
+}

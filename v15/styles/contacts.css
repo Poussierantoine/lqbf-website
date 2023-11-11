@@ -1,10 +1,8 @@
-/* Réinitialisation de la marge pour la section #contact-prices */
 section#contacts {
   margin: 0;
-  margin-bottom: 100px;
 }
 
-/* Phrase de fin */
+/** Phrase de fin */
 p.finalPhrase {
   margin: 50px 0;
   font-size: 2rem;
@@ -13,13 +11,13 @@ p.finalPhrase {
 
 
 
-/* Grille des contacts */
+/** Grille des contacts */
 #contacts-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 
 ul#contacts-list li {
@@ -42,12 +40,9 @@ ul#contacts-list li p {
   font-size: 30px;
 }
 
-/* Media query pour passer de 4 éléments par ligne à 2 éléments par ligne */
+
+/** responsive */
 @media (max-width: 1100px) {
-  #contacts-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-  }
 ul#contacts-list li {
   gap: 20px;
 }
@@ -60,16 +55,7 @@ ul#contacts-list li {
   }
 }
 
-/* Media query pour passer à une colonne à une résolution encore plus étroite */
-@media (max-width: 700px) {
-  #contacts-list {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-}
-
-
-/* animations */
+/** animations */
 
 ul#contacts-list li {
 opacity: 0;
@@ -78,11 +64,23 @@ transition: all 0.5s ease-in-out;
 }
 
 ul#contacts-list li#second-contact {
-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  justify-content: right;
 }
 
 
 ul#contacts-list.visible li {
-opacity: 1;
-transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
+
+@media (max-width: 700px) {
+  #contacts-list {
+    grid-template-columns: 1fr;
+  }
+  ul#contacts-list li#second-contact {
+    justify-content: left;
+  }
+}
+
+

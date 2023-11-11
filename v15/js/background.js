@@ -1,5 +1,7 @@
 
-
+/**
+ * @description cercles de l'animation de fond qui montent
+ */
 const ascArray = [
     {
         "x": 15.219890042686629,
@@ -66,6 +68,9 @@ const ascArray = [
     }
 ]
 
+/**
+ * @decription cercles de l'animation de fond qui descendent
+ */
 const descArray = [
     {
         "x": 18.73499359394102,
@@ -111,19 +116,9 @@ const descArray = [
     },
 ]
 
-/**
- * 0: light theme
- * 1: dark theme
- */
-const themeBackgroundImagePalete = [
-  /* "linear-gradient(316deg, #FFF7EF 0%, #FFF6F5 50%)", */
-  "linear-gradient(316deg, #FFE6CD 0%, #FFDFDF 70%)",
-  "linear-gradient(316deg, #110119 0%, #090113 50%)"
-]
-
 
 /**
- * retourne une div de class circle de taille aléatoire
+ * @description retourne une div de class circle avec deux div enfant imbriquées de classes spotlight et spotlight2
  * @param {Number} x position x en vw 
  * @param {Number} y position y en px
  * @param {Number} size en vw
@@ -157,12 +152,8 @@ const createCircle = (x, y, size, color, rgb) => {
 
 
 /**
- * 
- * @param {Number} pageHeight - hauteur de la page en px
- * @param {Number} pageWidth - largeur de la page en px
- * @param {Number} nbCircles - nombre de cercles à créer
- * @param {Number} widthFillingPercentage - pourcentage de la largeur de la page à remplir (si le pourcentage est inferieur à 100, le centre de la page ne sera pas rempli)
- * @param {Number} maxCircleSizeInPercentage - taille maximale des cercles en px
+ * @description à partir des tableaux ascArray et descArray (haut du fichier),
+ * crée les cercles et les ajoute aux divs #asc et #desc dans la div #background 
  */
 export default function initBackground () {
   const descDiv = document.querySelector('#desc')
@@ -177,21 +168,3 @@ export default function initBackground () {
 
 
 
-export function switchBackgroundToDark (){
-  const body = document.querySelector('body');
-  body.style.backgroundImage = themeBackgroundImagePalete[1];
-  const backgroundDiv = body.querySelector('#background');
-  backgroundDiv.innerHTML = '';
-  body.classList.remove('light');
-  body.classList.add('dark');
-  initBackground();
-}
-
-export function switchBackgroundToLight (){
-  const body = document.querySelector('body');
-  body.style.backgroundImage = themeBackgroundImagePalete[0];
-  const backgroundDiv = body.querySelector('#background');
-  backgroundDiv.innerHTML = '';
-  body.classList.remove('dark');
-  body.classList.add('light');
-}

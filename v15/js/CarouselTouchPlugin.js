@@ -1,4 +1,9 @@
 
+/**
+ * @class CarouselTouchPlugin
+ * @classdesc Classe pour gérer le défilement au toucher type mobile. cette classe a été créée à partir 
+ * d'un tutoriel de Grafikart et ameliorée selon mes besoins
+ */
 export default class CarouselTouchPlugin {
 
 
@@ -14,6 +19,10 @@ export default class CarouselTouchPlugin {
     this.carousel = carousel;
   }
 
+  /**
+   * @description gere le debut du drag et initialise lesvaleurs
+   * @param {Event} e 
+   */
   startDrag(e) {
     if (e.touches) {
       if (e.touches.length > 1) {
@@ -27,6 +36,10 @@ export default class CarouselTouchPlugin {
     this.carousel.disableTransition();
   }
 
+  /**
+   * @description actualise les valeurs de translation
+   * @param {Event} e 
+   */
   drag(e) {
     if (this.origin) {
       let point = e.touches ? e.touches[0] : e;
@@ -43,6 +56,10 @@ export default class CarouselTouchPlugin {
     }
   }
 
+  /**
+   * @description verifie si le drag est suffisant pour changer de slide et le fait si c'est le cas
+   * @param {Event} e 
+   */
   endDrag(e) {
     this.carousel.enableTransition();
     if (this.origin && this.lastTranslate) {
@@ -51,6 +68,9 @@ export default class CarouselTouchPlugin {
           this.carousel.next();
         } else {
           this.carousel.prev();
+        }
+        if(this.carousel.movingAlone){
+          this.carousel.movingAlone = false;
         }
       } else {
         this.carousel.gotoItem(this.carousel.currentItem);

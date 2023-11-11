@@ -4,12 +4,6 @@ import initGSAPAnimations from "./js/gsapAnims.js";
 import initBackground from "./js/background.js";
 import initThemeToggle from "./js/theme.js";
 
-
-
-/* if(document.readyState !== "loading") {
-  initPhotos();
-} */
-
 document.addEventListener("DOMContentLoaded", () => {
   initPhotos();
   initAnimations();
@@ -17,8 +11,3 @@ document.addEventListener("DOMContentLoaded", () => {
   initThemeToggle();
   initBackground()
 });
-
-
-/* window.addEventListener('resize', () => {
-  console.log(window.innerWidth)
-}) */

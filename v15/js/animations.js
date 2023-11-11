@@ -1,7 +1,7 @@
 
 
 /**
- * cree une animation pour inciter au scroll sur le landing
+ * @description crée une animation pour inciter au scroll sur le landing
  */
 const scrollInvite = function (){
   const button = document.querySelector('button#arrow-bottom');
@@ -15,7 +15,8 @@ const scrollInvite = function (){
 }
 
 /**
- * cree une animation pour faire apparaitre les contacts les uns apres les autres (voir CSS)
+ * @description cree une animation pour faire apparaitre les contacts les uns apres les autres
+ * l'animation est en css, cette fonction sert juste a toggle la classe visible
  */
 const contactAnim = function () {
   const contact = document.querySelector('section#contacts ul#contacts-list')
@@ -33,7 +34,9 @@ const contactAnim = function () {
 
 
 
-
+/**
+ * @description initialise les animations d'invite de scroll du landing et des contacts
+ */
 export default function initAnimations() {
   scrollInvite();
   contactAnim();

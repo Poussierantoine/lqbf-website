@@ -1,5 +1,10 @@
 import CarouselTouchPlugin from "./CarouselTouchPlugin.js";
 
+/**
+ * @class Carousel
+ * @classdesc Classe pour créer un carousel et la logique de defilement. Cette classe a été créée à partir
+ * d'un tutoriel de Grafikart et ameliorée selon mes besoins
+ */
 export default class Carousel {
   /**
    * @callback MoveCallback
@@ -20,92 +25,94 @@ export default class Carousel {
    * @property {boolean} [pagination = false]  donne une pagination en dessous du carousel sous forme de points
    * @property {boolean} [infinite = false]  le carousel defile à la fois vers la gauche et la droite au lieu de sauter quand la liste est finie
    * @property {boolean} [mobileTouch = false] active la possibilité de drag pour deplacer les slides du carousel
-   */
+   * @param {Object} [options.movingAlone = false] active la fonctionnalité qui scroll le carousel automatiquement, quand l'utilisateur utilise le carousel, cela s'arrete
+   * @property {Number} [maxMobileWidth = 800] la largeur maximale pour considerer le device comme un mobile
+  */
+ 
+ /**
+  * @property {CarouselOptions} options
+  * @description les options du carousel
+ */
+options;
 
-  /**
-   * @property {CarouselOptions} options
-   * @description les options du carousel
-   */
-  options;
+/**
+ * @property {HTMLElement} element
+ * @description le carousel
+*/
+element;
 
-  /**
-   * @property {HTMLElement} element
-   * @description le carousel
-   */
-  element;
-  
-  /**
-   * @property {HTMLElement} container
-   * @description le container des éléments du carousel
+/**
+ * @property {HTMLElement} container
+ * @description le container des éléments du carousel
    */
   container;
 
   /**
    * @property {HTMLElement} nextButton
    * @description le bouton de navigation vers la droite
-   */
-  nextButton;
+  */
+ nextButton;
+ 
+ /**
+  * @property {HTMLElement} prevButton
+  * @description le bouton de navigation vers la gauche
+ */
+prevButton;
 
-  /**
-   * @property {HTMLElement} prevButton
-   * @description le bouton de navigation vers la gauche
-   */
-  prevButton;
+/**
+ * @property {HTMLElement[]} items
+ * @description les éléments du carousel
+*/
+items;
 
-  /**
-   * @property {HTMLElement[]} items
-   * @description les éléments du carousel
-   */
-  items;
+/**
+ * @property {number} currentItem
+ * @description l'index de l'élément courant
+*/
+currentItem;
 
-  /**
-   * @property {number} currentItem
-   * @description l'index de l'élément courant
-   */
-  currentItem;
+/**
+ * @property {number} nbItems
+ * @description le nombre d'éléments du carousel
+*/
+nbItems;
 
-  /**
-   * @property {number} nbItems
-   * @description le nombre d'éléments du carousel
-   */
-  nbItems;
-
-  /**
-   * @property {number} offset
-   * @description le nombre d'éléments dupliqués à gauche du carousel dans le cas de this.options.infinite = true
-   */
-  offset;
+/**
+ * @property {number} offset
+ * @description le nombre d'éléments dupliqués à gauche du carousel dans le cas de this.options.infinite = true
+*/
+offset;
 
 
   /**
    * @property {MoveCallback[]} moveCallbacks
    * @description les callbacks appelés lors d'un déplacement du carousel
-   */
-  moveCallbacks;
+  */
+ moveCallbacks;
+ 
+ /**
+  * @property {boolean} isMobile
+  * @description le carousel est-il en mode mobile
+ */
+isMobile;
 
-  /**
-   * @property {boolean} isMobile
-   * @description le carousel est-il en mode mobile
-   */
-  isMobile;
+/**
+ * @property {HTMLElement} pagination
+ * @description la pagination du carousel
+*/
+pagination;
 
-  /**
-   * @property {HTMLElement} pagination
-   * @description la pagination du carousel
-   */
-  pagination;
-
-  /**
-   * @property {Boolean} movingAlone
-   * @description si true, le carousel change d'image automatiquement grace à la fonction moveAlone
-   */
-  movingAlone
+/**
+ * @property {Boolean} movingAlone
+ * @description si true, le carousel change d'image automatiquement grace à la fonction moveAlone
+*/
+movingAlone
 
 
-  /**
-   * crée une div avec la classe carousel__container et place les éléments du carousel dans cette div et place la div dans le carousel passé en paramètre
-   * place un event listener sur la fenetre pour gérer le resize et un event sur les fleches du clavier pour gérer le défilement du carousel
-   * @param {HTMLElement} element
+/**
+ * crée une div avec la classe carousel__container et place les éléments du carousel dans cette div et place la div dans le carousel passé en paramètre
+ * place un event listener sur la fenetre pour gérer le resize et un event sur les fleches du clavier pour gérer le défilement du carousel
+ * @param {HTMLElement} element
    * @param {Object} options
    * @param {Object} [options.slidesToScroll = 1] Nombre d'éléments à faire défiler
    * @param {Object} [options.slidesVisible = 1] Nombre d'éléments visible dans un slide
@@ -118,21 +125,23 @@ export default class Carousel {
    * @param {Object} [options.infinite = false]  le carousel defile à la fois vers la gauche et la droite au lieu de sauter quand la liste est finie
    * @param {Object} [options.mobileTouch = false] active la possibilité de drag pour deplacer les slides du carousel
    * @param {Object} [options.movingAlone = false] active la fonctionnalité qui scroll le carousel automatiquement, quand l'utilisateur utilise le carousel, cela s'arrete
-   */
-  constructor(element, options = {}) {
-    this.element = element;
-    this.options = Object.assign(
-      {},
-      {
-        slidesToScroll: 1,
-        slidesVisible: 1,
-        carouselBackgroundColor: "white",
-        navigation: true,
-        loop: false,
-        pagination: true,
-        infinite: false,
-        mobileTouch: false,
-        movingAlone: false,
+   * @property {Number} [maxMobileWidth = 800] la largeur maximale pour considerer le device comme un mobile
+*/
+constructor(element, options = {}) {
+  this.element = element;
+  this.options = Object.assign(
+    {},
+    {
+      slidesToScroll: 1,
+      slidesVisible: 1,
+      carouselBackgroundColor: "white",
+      navigation: true,
+      loop: false,
+      pagination: true,
+      infinite: false,
+      mobileTouch: false,
+      movingAlone: false,
+      maxMobileWidth: 800,
       },
       options
     );
@@ -210,7 +219,7 @@ export default class Carousel {
   }
 
   /**
-   * gere la taille des éléments du carousel en fonction du nombre d'éléments visible et du nombre d'éléments à faire défiler
+   * @description gere la taille des éléments du carousel en fonction du nombre d'éléments visible et du nombre d'éléments à faire défiler
    */
   setStyle() {
     // container
@@ -250,7 +259,7 @@ export default class Carousel {
   }
 
   /**
-   * créee les flèches de navigation et place un callback dans $this.moveCallbacks pour gérer l'affichage des flèches
+   * @description créee les flèches de navigation et place un callback dans $this.moveCallbacks pour gérer l'affichage des flèches
    */
   createNavigation() {
     const navigationButtonStyle = function (button) {
@@ -322,7 +331,7 @@ export default class Carousel {
   }
 
   /**
-   * crée une pagination sous forme de points en bas du carousel et stock dans this.pagination
+   * @description crée une pagination sous forme de points en bas du carousel et stock dans this.pagination
    */
   createPagination() {
     this.pagination = this.createDivWithClass("carousel__pagination");
@@ -393,14 +402,14 @@ export default class Carousel {
   }
 
   /**
-   * déplace le carousel vers les élément suivant
+   * @description déplace le carousel vers les élément suivant
    */
   next() {
     this.gotoItem(this.currentItem + this.slidesToScroll);
   }
 
   /**
-   * déplace le carousel vers les élément précédent
+   * @description déplace le carousel vers les élément précédent
    */
   prev() {
     this.gotoItem(this.currentItem - this.slidesToScroll);
@@ -412,7 +421,7 @@ export default class Carousel {
   }
 
   /**
-   * déplace le carousel vers l'élément ciblé
+   * @description déplace le carousel vers l'élément ciblé
    * @param {Number} index
    * @param {boolean} [animation = true]
    */
@@ -492,7 +501,7 @@ export default class Carousel {
   }
 
   /**
-   * remet le container à la bonne place pour impression de scroll infini
+   * @description remet le container à la bonne place pour impression de scroll infini
    */
   resetInfinite() {
     if (this.currentItem <= this.slidesToScroll) {
@@ -509,10 +518,10 @@ export default class Carousel {
   }
 
   /**
-   * si la fenetre est resize, on recalcule le nombre d'éléments visible
+   * @description si la fenetre est resize, on recalcule le nombre d'éléments visible
    */
   onWindowResize() {
-    let mobile = window.innerWidth < 800;
+    let mobile = window.innerWidth < this.options.maxMobileWidth;
     if (mobile !== this.isMobile) {
       this.isMobile = mobile;
       this.setStyle();
@@ -528,14 +537,14 @@ export default class Carousel {
   }
 
   /**
-   * retourne le nombre d'éléments à faire défiler (=1 si mobile)
+   * @description retourne le nombre d'éléments à faire défiler (=1 si mobile)
    */
   get slidesToScroll() {
     return this.isMobile ? 1 : this.options.slidesToScroll;
   }
 
   /**
-   *  retourne le nombre de slide visible (=1 si mobile)
+   *  @description retourne le nombre de slide visible (=1 si mobile)
    */
   get slidesVisible() {
     return this.isMobile ? 1 : this.options.slidesVisible;
@@ -556,6 +565,9 @@ export default class Carousel {
     return this.element.offsetWidth;
   }
 
+  /**
+   * @description lance la fonction next toutes les 5 secondes
+   */
   moveAlone(){
     if(this.movingAlone === true){
       this.next();
