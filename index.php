@@ -1,6 +1,6 @@
 <?php
 
-$folder = '../images/';
+$folder = './images/';
 $images = glob($folder . 'photos/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRACE);
 $imagesHtml = '';
 foreach ($images as $image) {
