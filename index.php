@@ -71,10 +71,10 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
                     <span class="text-line">Chanteuse, clavériste, batteur,</span>
                     <span class="text-line">trombonistes, bassiste...</span>
                 </p>
-                <img src="<?= $folder ?>images_description/TT9B0090.JPG" alt="photo du groupe entier">
+                <img src="<?= $folder ?>description_images/TT9B0090.JPG" alt="photo du groupe entier">
             </div>
             <div class="description-line image-on-left" id="second-line">
-                <img src="<?= $folder ?>images_description/1X7A5704.JPG" alt="photo du groupe entier">
+                <img src="<?= $folder ?>description_images/1X7A5704.JPG" alt="photo du groupe entier">
                 <p class="theme-colored">
                     <span class="text-line">Nos influences sont multiples </span>
                     <span class="text-line">et colorées, allant de la soul </span>
@@ -92,7 +92,7 @@ $mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
                     <span class="text-line">représentations.</span>
                     <span class="text-line">Votre scène sera la nôtre!</span>
                 </p>
-                <img src="<?= $folder ?>images_description/TT9B0006.JPG" alt="photo du groupe entier">
+                <img src="<?= $folder ?>description_images/TT9B0006.JPG" alt="photo du groupe entier">
             </div>
         </section>
 
