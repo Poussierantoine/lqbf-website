@@ -1,0 +1,86 @@
+/** landing */
+
+section#landing {
+    height:100vh;
+    width:100vw;
+    box-sizing: border-box;
+    justify-content: start;
+    transition: all 0.1s ease-in-out;
+}
+
+section#landing #title{
+    height: fit-content;
+    top: 5vh;
+    left: auto;
+    right: auto;
+    position: absolute;
+}
+
+section#landing h1{
+    color: white;
+    font-size: 20vw;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    margin:0;
+    font-variation-settings: 'wght' 800, 'wdth' 100, 'opsz' 90, 'GRAD' 250, 'XTRA' 560, 'XOPQ' 120, 'YOPQ' 80, 'YTUC' 700;
+}
+
+#main-image {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/** scroll invite */
+
+section#landing button#arrow-bottom{
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    padding: 100px;
+}
+
+section#landing button#arrow-bottom:hover{
+    cursor: pointer;
+}
+
+button#arrow-bottom:hover img{
+    animation-iteration-count: 2;
+    animation-name: scrollInvite;
+    animation-duration: 0.8s;
+    transform: scale(1.5) translateY(-50px);
+}
+
+button#arrow-bottom img{
+    filter: drop-shadow(0 0 4px rgba(0,0,0, 0.8));
+}
+
+@keyframes scrollInvite {
+    from {
+        transform: translate(0%);
+    }
+    to {
+        transform: scale(1.5) translateY(-50px);
+    }
+}
+
+
+/* responsive */
+
+@media (max-width: 1200px) {
+    button#arrow-bottom {
+        display: none;
+    }
+    section#landing {
+        width: 100vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 800px) {
+    section#landing {
+        min-height:50vh;
+    }
+}

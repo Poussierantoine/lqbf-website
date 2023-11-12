@@ -1,0 +1,46 @@
+import initPhotos from "./js/photos.js";
+import initAnimations from "./js/animations.js";
+import initGSAPAnimations from "./js/gsapAnims.js";
+import initBackground from "./js/background.js";
+import initThemeToggle from "./js/theme.js";
+
+
+async function imageLoaded(img) {
+  return new Promise((resolve, reject) => {
+    if (!img.complete){
+      img.onload = () => {
+        resolve(img.src);
+      }
+    }else{
+      resolve(img.src);
+    }
+  });
+}
+
+async function loaderDisabling() {
+    const imageLoadedPromises = [];
+    const imgs = [];
+    document.querySelectorAll("img").forEach((img) => {
+      if(img.loading !== "lazy"){
+        imgs.push(img);
+      }
+    })
+    imgs.forEach((img) => {
+      imageLoadedPromises.push(imageLoaded(img));
+    });
+    Promise.all(imageLoadedPromises).then(() => {
+      document.querySelector("#loader").remove();
+    })
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.querySelector("#loader img");
+  loader.fetchPriority = 'high';
+  loaderDisabling();
+  initPhotos();
+  initAnimations();
+  initGSAPAnimations();
+  initThemeToggle();
+  initBackground()
+});
