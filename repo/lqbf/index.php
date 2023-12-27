@@ -1,6 +1,6 @@
 <?php
 
-$source_folder = './lqbf/';
+$source_folder = './';
 $folder = 'images/';
 $images = glob($folder . 'photos/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRACE);
 $imagesHtml = '';
@@ -21,13 +21,13 @@ $mainImage = glob($folder . 'main_image/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LQBF</title>
-    <link href="./lqbf/style.css" rel="stylesheet">
+    <link href="<?= $source_folder ?>style.css" rel="stylesheet">
     <!-- imports GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <!-- appli js -->
-    <script src="./lqbf/app.js" type="module"></script>
+    <script src="<?= $source_folder ?>app.js" type="module"></script>
 </head>
 
 <body>
@@ -98,18 +98,15 @@ $mainImage = glob($folder . 'main_image/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRA
         </section>
 
         <section id="photos">
-            <h3 class="theme-colored">Voici quelques images de notre groupe</h3>
 
             <div id="carousel">
                 <?= $imagesHtml ?>
             </div>
         </section>
 
+        <p style="color:white">les vidéos sont en cours de publication, cette section est vide pour le moment</p>
         <section id="videos">
-            <h3 class="theme-colored">Voici quelques extraits de nos prestations</h3>
-
             <div id="video-container">
-                <iframe src="https://www.youtube.com/embed/vQ321gpB3eY?si=DnNul19NU0Cjiwos" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
 

@@ -6,7 +6,7 @@
  */
 const themeBackgroundImagePalete = [
   /* "linear-gradient(316deg, #FFF7EF 0%, #FFF6F5 50%)", */
-  "linear-gradient(316deg, #FFE6CD 0%, #FFDFDF 70%)",
+  "linear-gradient(316deg, #FFDFDF 0%, #FFE6CD 70%)",
   "linear-gradient(316deg, #110119 0%, #090113 50%)"
 ]
 
@@ -63,8 +63,8 @@ const switchToLightTheme = function () {
   document.querySelector('#theme-switch-container').classList.toggle('dark-theme');
   const  tl = gsap.timeline();
   tl.to('#theme-switch', {duration: 1, rotation: 360, x: 21, ease: "power1.inOut"})
-  .to('#theme-switch', {backgroundColor: "#FFE1C7", ease: "power2"}, "-=1")
-  .to('header', {duration: 1, backgroundColor: '#FFE1C7', ease: 'power2'}, "-=1")
+  .to('#theme-switch', {backgroundColor: "#FFE6CD", ease: "power2"}, "-=1")
+  .to('header', {duration: 1, backgroundColor: '#FFE6CD', ease: 'power2'}, "-=1")
   .to('header h2', {duration: 1, color: 'black', ease: 'power2'}, "-=1")
   .to("#sun-icon", {duration: 1, scale: 2, ease: "power1"}, "-=1")
   .to("#sun-icon", {duration: 1, opacity: 1, ease: "power1.in"}, "-=1")

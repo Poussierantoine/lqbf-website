@@ -31,8 +31,8 @@ ul#contacts-list li {
 }
 
 ul#contacts-list li img {
-  max-width: 90px;
-  max-height: 90px;
+  max-width: 70px;
+  max-height: 70px;
 }
 
 ul#contacts-list li p {
@@ -59,7 +59,7 @@ ul#contacts-list li {
 
 ul#contacts-list li {
 opacity: 0;
-transform: translateY(50px);
+transform: translateY(40px);
 transition: all 0.5s ease-in-out;
 }
 
@@ -77,9 +77,14 @@ ul#contacts-list.visible li {
 @media (max-width: 700px) {
   #contacts-list {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
   ul#contacts-list li#second-contact {
     justify-content: left;
+  }
+  ul#contacts-list li {
+    transition: none;
+    transform: translateY(0);
   }
 }
 

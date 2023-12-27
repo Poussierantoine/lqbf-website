@@ -1,6 +1,6 @@
 import initPhotos from "./js/photos.js";
 import initAnimations from "./js/animations.js";
-import initGSAPAnimations from "./js/gsapAnims.js";
+import initGSAPAnimations, { scrollInviteAnim } from "./js/gsapAnims.js";
 import initBackground from "./js/background.js";
 import initThemeToggle from "./js/theme.js";
 
@@ -30,6 +30,9 @@ async function loaderDisabling() {
     });
     Promise.all(imageLoadedPromises).then(() => {
       document.querySelector("#loader").remove();
+      setTimeout(() => {
+        scrollInviteAnim();
+      }, 1000);
     })
 }
 
