@@ -1,0 +1,17 @@
+
+/** gestion des couleurs à partir de la classe du main changée dynamiquement  */
+
+main.dark p.theme-colored, main.dark h3.theme-colored{
+    color: white;
+}
+
+main.dark img.theme-colored {
+    filter: invert(100%);
+}
+
+
+main.light p.theme-colored, main.light h3.theme-colored{
+    color: black;
+}
+
+

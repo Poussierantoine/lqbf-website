@@ -1,0 +1,33 @@
+section#videos {
+    width: 100vw;
+}
+
+div#videoContainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#video-container iframe {
+    height: 630px;
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** responsive  */
+@media screen and (max-width: 1300px){
+    #video-container iframe {
+        height: 315px;
+        width: 560px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #video-container iframe {
+        height: 170;
+        width: 300px;
+    }
+}

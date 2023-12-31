@@ -1,0 +1,91 @@
+section#contacts {
+  margin: 0;
+}
+
+/** Phrase de fin */
+p.finalPhrase {
+  margin: 50px 0;
+  font-size: 2rem;
+  font-variation-settings: 'wght' 600, 'opsz' 90;
+}
+
+
+
+/** Grille des contacts */
+#contacts-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+ul#contacts-list li {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 40px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+ul#contacts-list li img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+ul#contacts-list li p {
+  white-space: nowrap;
+  font-size: 30px;
+}
+
+
+/** responsive */
+@media (max-width: 1100px) {
+ul#contacts-list li {
+  gap: 20px;
+}
+  ul#contacts-list li img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  ul#contacts-list li p {
+    font-size: 20px;
+  }
+}
+
+/** animations */
+
+ul#contacts-list li {
+opacity: 0;
+transform: translateY(40px);
+transition: all 0.5s ease-in-out;
+}
+
+ul#contacts-list li#second-contact {
+  transition-delay: 0.3s;
+  justify-content: right;
+}
+
+
+ul#contacts-list.visible li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+  #contacts-list {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  ul#contacts-list li#second-contact {
+    justify-content: left;
+  }
+  ul#contacts-list li {
+    transition: none;
+    transform: translateY(0);
+  }
+}
+
+

@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Amstelvar-It";
+  src: url("../../fonts/Amstelvar-Italic.ttf") format("truetype");
+}
+
+/** containers */
+section#description {
+  min-width: 60vw;
+  gap: 6vh;
+  margin-bottom: 0;
+}
+
+/**  Affichage du texte */
+
+#description p {
+  font-family: Amstelvar-It;
+  font-variation-settings: "wgth" 400;
+  font-size: 2vw;
+  text-align: center;
+}
+
+/** responsive pour mobile */
+
+@media screen and (max-width: 900px) {
+  section#description {
+    min-width: 80vw;
+    gap: 5px;
+  }
+  section#description p {
+    width: 100%;
+    opacity: 1;
+    font-size: 25px;
+    display: block;
+  }
+  div.description-line p span.text-line {
+    margin-right: 5px;
+    display: inline;
+    padding: 0;
+  }
+}

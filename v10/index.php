@@ -7,7 +7,7 @@ foreach ($images as $image) {
     $imagesHtml .= '<img src="' . $image . '"/>';
 }
 
-$mainImage = glob($folder . 'main-photo/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRACE)[0];
+$mainImage = glob($folder . 'main_image/' . '*.{jpg,jpeg,png,gif,JPG}', GLOB_BRACE)[0];
 
 ?>
 
